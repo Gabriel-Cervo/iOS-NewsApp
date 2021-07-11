@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 //MARK: CollectionView Methods
 extension HeadlineTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -32,6 +33,10 @@ extension HeadlineTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         let currentArticle = articles?[indexPath.row]
         cell.articleTitle.text = currentArticle?.title ?? ""
         cell.articleDate.text = ""
+        
+        if let imageURL = URL(string: currentArticle?.urlToImage ?? "") {
+            cell.imageView.kf.setImage(with: imageURL)
+        }
 
         return cell
     }
