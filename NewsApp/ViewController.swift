@@ -9,9 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     let service = NewsService()
+    var headlineArticles: [Article]?
+    var recentArticles: [Article]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadArticles()
+    }
+    
+    private func loadArticles() {
+        service.loadHeadlineArticles { [weak self] headlineArticles in
+            self?.headlineArticles = headlineArticles
+        }
+        
+        service.loadRecentArticles { [weak self] recentArticles in
+            self?.recentArticles = recentArticles
+        }
     }
 }
 

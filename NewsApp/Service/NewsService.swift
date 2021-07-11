@@ -7,29 +7,12 @@
 
 import Foundation
 
-final class NewsService {
-    private var headlineArticles: DataModel?
-    private var recentArticles: DataModel?
-    
-    init() {
-        loadData()
+struct NewsService {
+    func loadHeadlineArticles(onCompletion: @escaping ([Article]) -> Void) {
+        DataLoader().getHeadlineArticles { onCompletion($0.articles) }
     }
     
-    private func loadData() {
-        DataLoader().getHeadlineArticles { [weak self] data in
-            self?.headlineArticles = data
-        }
-        
-        DataLoader().getRecentArticles { [weak self] data in
-            self?.recentArticles = data
-        }
-    }
-    
-    func loadHeadlineArticles() -> [Article] {
-        headlineArticles?.articles ?? []
-    }
-    
-    func loadRecentArticles() -> [Article] {
-        recentArticles?.articles ?? []
+    func loadRecentArticles(onCompletion: @escaping ([Article]) -> Void) {
+        DataLoader().getRecentArticles { onCompletion($0.articles) }
     }
 }
