@@ -16,6 +16,10 @@
 		848FA2BF269A9D470074B299 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA2BE269A9D470074B299 /* Constants.swift */; };
 		848FA2C3269A9EBB0074B299 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA2C2269A9EBB0074B299 /* Article.swift */; };
 		848FA2C5269A9EF40074B299 /* ArticleSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA2C4269A9EF40074B299 /* ArticleSource.swift */; };
+		848FA2C8269AA1220074B299 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA2C7269AA1220074B299 /* DataModel.swift */; };
+		848FA2CC269AA2700074B299 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA2CB269AA2700074B299 /* NewsService.swift */; };
+		848FA2CF269AA33B0074B299 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA2CE269AA33B0074B299 /* DataLoader.swift */; };
+		848FA2D3269AA6770074B299 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA2D2269AA6770074B299 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		848FA2BE269A9D470074B299 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		848FA2C2269A9EBB0074B299 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		848FA2C4269A9EF40074B299 /* ArticleSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSource.swift; sourceTree = "<group>"; };
+		848FA2C7269AA1220074B299 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		848FA2CB269AA2700074B299 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		848FA2CE269AA33B0074B299 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		848FA2D2269AA6770074B299 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +70,9 @@
 		848FA2A9269A95D40074B299 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				848FA2CD269AA2DD0074B299 /* Networking */,
+				848FA2C6269AA1080074B299 /* Service */,
 				848FA2C1269A9EB00074B299 /* Model */,
-				848FA2C0269A9EA60074B299 /* Data */,
 				848FA2AA269A95D40074B299 /* AppDelegate.swift */,
 				848FA2AC269A95D40074B299 /* SceneDelegate.swift */,
 				848FA2AE269A95D40074B299 /* ViewController.swift */,
@@ -76,20 +85,31 @@
 			path = NewsApp;
 			sourceTree = "<group>";
 		};
-		848FA2C0269A9EA60074B299 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		848FA2C1269A9EB00074B299 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				848FA2C2269A9EBB0074B299 /* Article.swift */,
 				848FA2C4269A9EF40074B299 /* ArticleSource.swift */,
+				848FA2C7269AA1220074B299 /* DataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		848FA2C6269AA1080074B299 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				848FA2CB269AA2700074B299 /* NewsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		848FA2CD269AA2DD0074B299 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				848FA2CE269AA33B0074B299 /* DataLoader.swift */,
+				848FA2D2269AA6770074B299 /* Networking.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,12 +182,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848FA2C8269AA1220074B299 /* DataModel.swift in Sources */,
+				848FA2D3269AA6770074B299 /* Networking.swift in Sources */,
 				848FA2AF269A95D40074B299 /* ViewController.swift in Sources */,
+				848FA2CC269AA2700074B299 /* NewsService.swift in Sources */,
 				848FA2C5269A9EF40074B299 /* ArticleSource.swift in Sources */,
 				848FA2AB269A95D40074B299 /* AppDelegate.swift in Sources */,
 				848FA2AD269A95D40074B299 /* SceneDelegate.swift in Sources */,
 				848FA2BF269A9D470074B299 /* Constants.swift in Sources */,
 				848FA2C3269A9EBB0074B299 /* Article.swift in Sources */,
+				848FA2CF269AA33B0074B299 /* DataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
