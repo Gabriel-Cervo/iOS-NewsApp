@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
     let service = NewsService()
     var headlineArticles: [Article]?
     var recentArticles: [Article]?
@@ -15,6 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadArticles()
+        
+        let headlinesNib = UINib(nibName: "HeadlinesCell", bundle: nil)
+        self.tableView.register(headlinesNib, forCellReuseIdentifier: "HeadlinesCell")
     }
     
     private func loadArticles() {
