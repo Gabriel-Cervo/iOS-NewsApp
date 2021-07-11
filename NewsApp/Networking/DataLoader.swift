@@ -13,4 +13,8 @@ struct DataLoader {
     func getHeadlineArticles(completionHandler: @escaping (DataModel) -> Void) {
         networking.getData(for: Constants.headlinesURL, completionHandler: completionHandler)
     }
+    
+    func getRecentArticles(completionHandler: @escaping (DataModel) -> Void) {
+        networking.getData(for: Constants.recentsURL, completionHandler: completionHandler)
+    }
 }

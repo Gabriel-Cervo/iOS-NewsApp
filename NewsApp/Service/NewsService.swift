@@ -19,6 +19,10 @@ final class NewsService {
         DataLoader().getHeadlineArticles { [weak self] data in
             self?.headlineArticles = data
         }
+        
+        DataLoader().getRecentArticles { [weak self] data in
+            self?.recentArticles = data
+        }
     }
     
     func loadHeadlineArticles() -> [Article] {
