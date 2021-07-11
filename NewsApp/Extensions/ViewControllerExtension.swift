@@ -17,6 +17,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return section == 0 ? "Headline" : "Recent"
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 { // Headline News
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeadlinesCell") as? HeadlineTableViewCell else { fatalError("Could not dequeue reusable cell for HeadlinesCell") }
